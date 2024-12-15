@@ -13,7 +13,11 @@ app.use(bodyParser.json());
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // In-memory data store
-let items = [];
+let items = [
+    { id: uuidv4(), name: 'Item 1', description: 'This is the first item' },
+    { id: uuidv4(), name: 'Item 2', description: 'This is the second item' },
+    { id: uuidv4(), name: 'Item 3', description: 'This is the third item' },
+];
 
 // Routes
 app.get('/items', (req, res) => {

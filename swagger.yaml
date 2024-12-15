@@ -1,0 +1,22 @@
+openapi: 3.0.0
+info:
+  title: API Server with Swagger
+  version: 1.0.0
+  description: A simple API server documented with Swagger
+servers:
+  - url: http://localhost:4000
+paths:
+  /api/greet:
+    get:
+      summary: Greet the user
+      responses:
+        200:
+          description: Returns a greeting message
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Hello, World!

@@ -64,7 +64,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Item'
+              $ref: '#/components/schemas/ItemUpdate'
       responses:
         '200':
           description: Item updated
@@ -91,9 +91,23 @@ components:
   schemas:
     Item:
       type: object
+      required:
+        - id
+        - name
+        - description
       properties:
         id:
           type: string
+        name:
+          type: string
+        description:
+          type: string
+    ItemUpdate:
+      type: object
+      required:
+        - name
+        - description
+      properties:
         name:
           type: string
         description:

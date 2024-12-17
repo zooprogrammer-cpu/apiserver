@@ -25,7 +25,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Item'
+              $ref: '#/components/schemas/ItemPost'
       responses:
         '201':
           description: Item created
@@ -112,3 +112,14 @@ components:
           type: string
         description:
           type: string
+    ItemPost:
+      type: object
+      required:
+        - name
+        - description
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+
